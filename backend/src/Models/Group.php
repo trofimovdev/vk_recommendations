@@ -59,7 +59,7 @@ final class Group extends BaseModel
             $item->expiresAfter(self::CACHE_TTL);
             $cache->save($item);
         }
-        
+
         return $result;
     }
 

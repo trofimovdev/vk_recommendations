@@ -48,7 +48,7 @@ final class Dependencies
                 'port' => 6379
             ];
             $connection = new Predis\Client($config);
-            
+
             return new RedisAdapter($connection);
         });
     }

@@ -7,7 +7,7 @@ use Slim\App;
 /**
  * Register Slim routes into App object
  *
- * @package App
+ * @package App\Core
  */
 final class Routes
 {
@@ -29,7 +29,8 @@ final class Routes
     /**
      * Load routes
      */
-    public function loadRoutes()
+    public function load()
     {
+        $this->app->get('/groups', \App\Controllers\Groups::class . ':get');
     }
 }

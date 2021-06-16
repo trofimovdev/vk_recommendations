@@ -37,7 +37,7 @@ final class Group extends BaseModel
             $vk = new VKApiClient(getenv('VK_API_VERSION'), VKLanguage::RUSSIAN);
             $data = $vk->groups()->getById(getenv('VK_API_TOKEN'), [
                 'group_ids' => $ids,
-                'fields' => ['photo_100', 'country', 'city', 'members_count'],
+                'fields' => ['photo_100', 'country', 'city', 'members_count', 'verified', 'activity'],
             ]);
         } catch (Exception) {
             if ($try === 5) {
@@ -51,7 +51,6 @@ final class Group extends BaseModel
         foreach ($data as $group) {
             $group = (array)$group;
             $groupId = (string)$group['id'];
-            unset($group['id']);
             $result[$groupId] = $group;
 
             $item = $cache->getItem(self::CACHE_PREFIX . $groupId);

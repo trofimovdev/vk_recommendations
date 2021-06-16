@@ -1,0 +1,49 @@
+@import "src/style/_vars.scss";
+
+.DropDown {
+    font-size: 13px;
+    user-select: none;
+    position: relative;
+
+    &__header {
+        padding: 0 9px;
+        line-height: 28px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        border: 1px solid $dropdown-border;
+        border-radius: 3px;
+        background: $surface;
+
+        &__arrow {
+            background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAHCAYAAADebrddAAAAZUlEQVQY02P4//8/IwMRAKxu49YdNzZu2TkNlyaQ+IatO2cA1V0FKt5Zv2HLjv9ADbPQNYD4QPG5IPkNW3ZWgwWBGprRNSArBMo3oFiHpoEZp0IsGm7hVYikoQGIv2zctqsWXQ4AGPZvtpjg4t8AAAAASUVORK5CYII=);
+            width: 11px;
+            height: 7px;
+        }
+    }
+
+    &__options {
+        position: absolute;
+        width: calc(100% - 2px);
+        margin: -1px 0 0;
+        border: 1px solid $dropdown-border;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, .08);
+        background: $surface;
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px;
+        z-index: 2;
+
+        &__block {
+            line-height: 30px;
+            cursor: pointer;
+            list-style-type: none;
+            padding-left: 9px;
+            background: $surface;
+
+            &:hover {
+                background: $light-action;
+            }
+        }
+    }
+}

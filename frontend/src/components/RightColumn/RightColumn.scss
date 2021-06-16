@@ -1,0 +1,9 @@
+.RightColumn {
+    width: 230px;
+    position: relative;
+
+    & > .Block {
+        position: fixed;
+        width: inherit;
+    }
+}

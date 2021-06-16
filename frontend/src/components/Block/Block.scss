@@ -1,0 +1,7 @@
+@import "src/style/_vars.scss";
+
+.Block {
+    background: $surface;
+    border-radius: $block-border-radius;
+    box-shadow: 0 1px 0 0 $separator-common, 0 0 0 1px $separator-alternate;
+}

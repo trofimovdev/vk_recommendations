@@ -1,0 +1,14 @@
+@import "_vars.scss";
+@import "fonts.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: $background;
+    color: $on-background;
+    font-family: -apple-system, BlinkMacSystemFont, Roboto, sans-serif, Arial, Tahoma, Verdana;
+    font-weight: 400;
+}

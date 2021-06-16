@@ -1,0 +1,17 @@
+@import "src/style/_vars.scss";
+
+.RecommendationsBlock {
+    &__header {
+        border-bottom: 1px solid $separator-common;
+        padding: 0 20px;
+        background: $primary;
+        border-radius: $block-border-radius $block-border-radius 0 0;
+        height: 54px;
+        line-height: 54px;
+        font-size: 16px;
+    }
+
+    &__list {
+        padding: 0 20px;
+    }
+}

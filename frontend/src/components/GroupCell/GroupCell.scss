@@ -1,0 +1,96 @@
+@import "src/style/_vars.scss";
+
+.GroupCell {
+    padding: 15px 0;
+    display: flex;
+    flex-direction: row;
+    border-top: 1px solid rgba(0, 0, 0, .12);
+
+    &:first-child {
+        border-top: none;
+    }
+
+    &__img {
+        width: 80px;
+        height: 80px;
+        overflow: hidden;
+        margin: 0 12px 0 0;
+
+        & img {
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+        }
+    }
+
+    &__info {
+        padding: 7px 0 0 0;
+        font-size: 13px;
+
+        &__title {
+            font-weight: 700;
+            margin-bottom: 6px;
+
+            & a {
+                color: $link;
+                text-decoration: none;
+            }
+
+            &__text:hover {
+                text-decoration: underline;
+            }
+
+            &_verified {
+                background: url(data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D%220%200%2012%2012%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22m2.25%206.75%202.25%202.25%205.25-5.25%22%20fill%3D%22none%22%20stroke%3D%22%235c9ce6%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%2F%3E%3C%2Fsvg%3E) no-repeat 0 center;
+                margin-left: 7px;
+                padding: 2px 12px 2px 0;
+            }
+        }
+
+        &__activity {
+            margin-bottom: 6px;
+            color: $on-surface;
+        }
+
+        &__users {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            &__photos {
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: flex-end;
+
+                & a {
+                    width: 24px;
+                    height: 24px;
+                    border-radius: 50%;
+                    border: 2px solid $surface;
+                    background-size: cover;
+                    margin-right: -8px;
+                    cursor: pointer;
+
+                    &:first-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+
+            &__text {
+                margin-left: 8px;
+                font-size: 13px;
+                color: $on-surface;
+
+                &:hover {
+                    cursor: pointer;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    &__controls {
+        margin: 11px 0 0 auto;
+    }
+}

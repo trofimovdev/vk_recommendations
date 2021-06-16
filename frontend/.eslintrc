@@ -1,0 +1,16 @@
+{
+    "extends": [
+        "react-app",
+        "prettier"
+    ],
+    "plugins": [
+        "prettier"
+    ],
+    "rules": {
+        "jsx-quotes": [
+            2,
+            "prefer-double"
+        ],
+        "prettier/prettier": 2
+    }
+}
